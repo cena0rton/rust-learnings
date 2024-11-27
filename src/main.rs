@@ -7,7 +7,7 @@ fn main() {
     let _ismale = true;
     let _isabove18 = false;
 
-    if _ismale {
+    if _ismale {  // this is how if is written in rust
         println!("You are Male")
     } else {
         print!("you are female");
@@ -23,8 +23,18 @@ fn main() {
 
     let mut sum = 0;
 
-    for i in 1..100 {
+    for i in 1..100 {  // this is rust for loop
         sum = sum + i;
     }
-    println!("{}", sum)
+    println!("{}", sum);
+
+    fn dosum(a: i32,b: i32) -> i32 { // this is how you return in a fn
+        return a+b;
+    }
+
+    let a = 34;
+    let b = 44;
+    let sum = dosum(a,b);
+
+    println!("Sum of {},{} is {}" , a,b,sum);
 }
